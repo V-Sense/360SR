@@ -107,21 +107,3 @@ def ws_ssim(image1 , image2):
 
 
     return wsssim
-
-#image1 = imread('ref_4001.png')
-#image2 = imread('dis_4001.png')
-#
-#_, _, c = image1.shape
-#
-#lch = []
-#for _c in range(c):
-#    lch.append(ws_ssim(image1[:,:,_c], image2[:,:,_c]))
-#
-#fin_score = np.mean(lch)
-
-
-
-# image1 = imread('group_pic_long.jpg', flatten=True)
-# image2 = imread('group_pic_long.jpg', flatten=True)
-# wsssim = ws_ssim(image1,image2)
-# 

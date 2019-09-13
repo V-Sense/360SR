@@ -45,26 +45,3 @@ def ws_psnr(image1,image2):
     print("WS-PSNR ",ws_psnr)
 
     return ws_psnr
-
-#image1 = imread('ref_4001.png')
-#image2 = imread('dis_4001.png')
-#
-#_, _, c = image1.shape
-#
-#lch = []
-#for _c in range(c):
-#    lch.append(ws_psnr(image1[:,:,_c],image2[:,:,_c]))
-#
-#fin_score = np.mean(lch)
-
-
-
-
-
-# ws_psnr(image1,image2)
-
-
-
-   # mx: input ref image
-   # my: input ref image
-   # first estimate the ws_mse 

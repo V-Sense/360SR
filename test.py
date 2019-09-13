@@ -14,14 +14,14 @@ parser.add_argument('--upscale_factor', default=8, type=int, help='super resolut
 parser.add_argument('--test_mode', default='GPU', type=str, choices=['GPU', 'CPU'], help='using GPU or CPU')
 parser.add_argument('--image_name', type=str, help='test low resolution image name')
 # parser.add_argument('--folder_name', default = 'data/' + str(UPSCALE_FACTOR) + '/test/', type=str, help='folder name for images')
-parser.add_argument('--model_name', default='8x_G.pth', type=str, help='generator model epoch name')
+# parser.add_argument('--model_name', default='8x_G.pth', type=str, help='generator model epoch name')
 opt = parser.parse_args()
 
 UPSCALE_FACTOR = opt.upscale_factor
 init_aux('results', str(UPSCALE_FACTOR) + 'x')
 FOLDER = 'data/' + str(UPSCALE_FACTOR) + '/test/'
 files_list = glob(os.path.join(FOLDER, '*.png'))
-MODEL_NAME = opt.model_name
+MODEL_NAME = opt.model_name + str(UPSCALE_FACTOR) + 'x_G.pth'
 TEST_MODE = True if opt.test_mode == 'GPU' else False
 model = Generator(UPSCALE_FACTOR).eval()
 

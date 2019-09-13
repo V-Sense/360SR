@@ -38,11 +38,28 @@ python train.py
 
 optional arguments:
 --crop_size                   training images crop size [default value is 88]
---upscale_factor              super resolution upscale factor [default value is 4](choices:[2, 4, 8])
+--upscale_factor              super resolution upscale factor [default value is 8](choices:[2, 4, 8])
 --num_epochs                  train epoch number [default value is 100]
 ```
 
+### Test
+
+```
+python test.py
+
+optional arguments:
+--upscale_factor              super resolution upscale factor [default value is 8](choices:[2, 4, 8])
+--test_mode 				  [default is 'GPU'] and choices:['GPU', 'CPU']
+parser.add_argument('--model_name', default='8x_G.pth', type=str, help='generator model epoch name')
+```
+
+
+
+## Results
+![results](img/results.png)
+
 ## Citation
+
 | Paper accepted in [IEEE 21st International Workshop on Multimedia Signal Processing (MMSP 2019)](https://mmsp2019.org/) |
 
 Please cite our [paper](https://v-sense.scss.tcd.ie/wp-content/uploads/2019/09/mmsp_sr_2019.pdf) in your publications if it helps your research:
