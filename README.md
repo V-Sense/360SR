@@ -20,15 +20,17 @@ conda install tqdm
 conda install opencv
 ```
 
-## Testing pre-trained models
-
-You need to download pre-trained models with [this link](http://v-sense.scss.tcd.ie/Datasets/SR360_models.zip) and extract in into `models` directory.
-
 ## Datasets
 
 The train, val, and test datasets are sampled from [SUN360](http://people.csail.mit.edu/jxiao/SUN360/).
-The dataset has 16700 images and Val dataset has 425 images.
+The dataset has 4500 ODIs. We used the equirectangular projection format for training and evaluations. 3500 ODIs were randomly selected from the total set for training purposes, and 500 ODIs were
+used for validation and test sets.
+
 Download the datasets and then extract it into `data` directory.
+
+## Testing pre-trained models
+
+You need to download pre-trained models with [this link](http://v-sense.scss.tcd.ie/Datasets/SR360_models.zip) and extract in into `models` directory.
 
 ## Usage
 
@@ -50,7 +52,6 @@ python test.py
 optional arguments:
 --upscale_factor              super resolution upscale factor [default value is 8](choices:[2, 4, 8])
 --test_mode 				  [default is 'GPU'] and choices:['GPU', 'CPU']
-parser.add_argument('--model_name', default='8x_G.pth', type=str, help='generator model epoch name')
 ```
 
 
